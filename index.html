@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Swiper组件animate的轮播动画</title>
+    <link rel="stylesheet" href="./css/swiper-3.4.1.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+</head>
+<style>
+    .swiper-slide{
+        width:100%;
+        height:300px;
+        background:#efc;
+    }
+    .swiper-slide p{
+        font-size:50px;
+        color:#000;
+        text-align:center;
+        line-height:300px;
+    }
+
+    /*改变Swiper切换的时间曲线*/
+    .swiper-wrapper{
+    transition-timing-function: ease;
+     /*transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: linear;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    transition-timing-function: step-start;
+    transition-timing-function: step-end;
+    transition-timing-function: steps(4, end);
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    transition-timing-function: inherit; */
+    }
+
+    /*改变animate.js的时间曲线*/
+    .ani{
+   animation-timing-function:linear;
+   /* animation-timing-function:ease;
+   animation-timing-function:ease-in;
+   animation-timing-function:ease-out;
+   animation-timing-function:cubic-bezier(n,n,n,n) ; */
+   -webkit-animation-timing-function:linear;
+   }
+/*  linear             规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。
+    ease               规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。
+    ease-in            规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。
+    ease-out           规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。
+    ease-in-out        规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。
+    cubic-bezier(n,n,n,n)                                 在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。 */
+
+</style>
+<body>
+    
+       <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >swiper-animate-effect="fadeInUp"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounce" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s" >swiper-animate-effect="bounce"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="flash" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="flash"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="pulse" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="pulse"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rubberBand" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rubberBand"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="shake" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="shake"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="swing" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="swing"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="tada" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="tada"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="wobble" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="wobble"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="jello" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="jello"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceIn"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceInDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceInLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceInRight"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceInUp"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceOut" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceOut"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceOutDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceOutDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceOutLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceOutLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceOutRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceOutRight"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="bounceOutUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="bounceOutUp"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeIn"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeDownBig"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeInLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeInLeftBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeInLeftBig"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeInRight"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeInRightBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeInRightBig"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeInUp"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeInUpBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeInUpBig"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOut" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOut"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutDownBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutDownBig"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutLeftBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutLeftBig"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutRight"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutRightBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutRightBig"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutUp"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="fadeOutUpBig" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="fadeOutUpBig"</p>
+            </div>
+            <!-- flppers -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="flip" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="flip"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="flipInX" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="flipInX"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="flipInY" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="flipInY"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="flipOutX" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="flipOutX"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="flipOutY" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="flipOutY"</p>
+            </div>
+            <!-- lightSpeed -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="lightSpeedIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="lightSpeedIn"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="lightSpeedOut" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="lightSpeedOut"</p>
+            </div>
+            <!-- Rotating Entrances -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rotateIn"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rotateInDownLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rotateInDownRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rotateInDownRight"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rotateInUpLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rotateInUpLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rotateInUpRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rotateInUpRight"</p>
+            </div>
+            <!-- Sliding Entrances -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideInUp"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideInDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideInLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideInRight"</p>
+            </div>
+            <!-- Sliding Exits -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideOutUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideOutUp"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideOutDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideOutDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideOutLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideOutLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="slideOutRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="slideOutRight"</p>
+            </div>
+            <!-- Zoom Entrances -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomIn"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomInDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomInLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomInRight"</p>
+            </div>
+
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomInUp"</p>
+            </div>
+            <!-- Zoom Exits -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomOut" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomOut"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomOutDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomOutDown"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomOutLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomOutLeft"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomOutRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomOutRight"</p>
+            </div>
+
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="zoomOutUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="zoomOutUp"</p>
+            </div>
+            <!-- Specials -->
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="hinge" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="hinge"</p>
+            </div>
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rollIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rollIn"</p>
+            </div>
+
+            <div class="swiper-slide">
+              <p class="ani" swiper-animate-effect="rollOut" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">swiper-animate-effect="rollOut"</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-1.10.1.min.js"></script>
+<script src="./js/swiper-3.4.1.jquery.min.js"></script>
+<script src="./js/swiper.animate1.0.2.min.js"></script>
+<script>        
+  var mySwiper = new Swiper ('.swiper-container', {
+  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+    swiperAnimateCache(swiper); //隐藏动画元素 
+    swiperAnimate(swiper); //初始化完成开始动画
+  }, 
+  onSlideChangeEnd: function(swiper){ 
+    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+  } 
+  })        
+</script>
+</html>
